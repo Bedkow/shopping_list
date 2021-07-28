@@ -1,12 +1,7 @@
 import ItemContainer from "./components/ItemContainer";
-import Item from "./components/Item";
 
 function App() {
-	return (
-		<ItemContainer>
-			<Item />
-		</ItemContainer>
-	);
+	return <ItemContainer />;
 }
 
 export default App;
