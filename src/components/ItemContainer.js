@@ -5,6 +5,8 @@ const ItemContainer = () => {
 	return (
 		<div>
 			<Item />
+			<Item />
+			<Item />
 		</div>
 	);
 };

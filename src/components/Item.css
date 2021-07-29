@@ -1,5 +1,31 @@
 .item {
 	border: 2px solid black;
 	width: 80%;
-	height: 20px;
+	margin: 10px auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn-container {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: nowrap;
+	padding: 5px;
+}
+
+.float-right-btn {
+	height: 40px;
+	width: 40px;
+	margin: 0 5px;
+}
+
+.name-input {
+	margin: 5px;
+	min-width: 50%;
+}
+
+.number-input {
+	height: 40px;
+	width: 80px;
+	margin: 5px;
 }
