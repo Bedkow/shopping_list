@@ -1,11 +1,11 @@
 import Item from "./Item";
+import ItemInitial from "./ItemInitial";
 import "./ItemContainer.css";
 
 const ItemContainer = () => {
 	return (
 		<div>
-			<Item />
-			<Item />
+			<ItemInitial />
 			<Item />
 		</div>
 	);

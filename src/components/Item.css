@@ -22,10 +22,16 @@
 .name-input {
 	margin: 5px;
 	min-width: 50%;
+	border: 2px black solid;
 }
 
 .number-input {
 	height: 40px;
 	width: 80px;
 	margin: 5px;
+	border: 2px black solid;
+}
+
+.saved {
+	background-color: rgb(202, 200, 200);
 }

@@ -1,13 +1,20 @@
 import "./Item.css";
 
 const Item = () => {
+	// let itemRandomNumber = Math.random();
+
+	const deleteItem = () => {
+		console.log("-");
+	};
+
 	return (
 		<div className="item">
-			<input type="text" className="name-input"></input>
-			<input type="number" className="number-input"></input>
+			<div className="name-input saved"></div>
+			<div className="number-input saved"></div>
 			<div className="btn-container">
-				<button className="float-right-btn">+</button>
-				<button className="float-right-btn">-</button>
+				<button className="float-right-btn" onClick={deleteItem}>
+					-
+				</button>
 			</div>
 		</div>
 	);
