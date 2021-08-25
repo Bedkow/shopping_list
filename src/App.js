@@ -1,11 +1,12 @@
-import ItemContainer from "./components/ItemContainer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
 		<div>
-			<header>Shopping List</header>
-			<ItemContainer />
-			<footer>Made by Bedkow (linkedin) (github) with React JS</footer>
+			<Header />
+
+			<Footer />
 		</div>
 	);
 }
