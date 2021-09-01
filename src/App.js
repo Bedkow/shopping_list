@@ -42,7 +42,7 @@ function App() {
 	};
 
 	return (
-		<div>
+		<div className="full-height">
 			<Header />
 
 			<div className="item">
@@ -64,18 +64,17 @@ function App() {
 					max="1000000000"
 				></input>
 				<div className="btn-container">
-					<button className="float-right-btn" onClick={handleAddNewItem}>
+					<button className="float-right-btn-add" onClick={handleAddNewItem}>
 						+
 					</button>
 				</div>
-
-				{/* delete all items */}
-				<div className="btn-container">
-					<button className="float-right-btn" onClick={handleDeleteAllItems}>
-						X
-					</button>
-				</div>
 			</div>
+
+			{/* delete all items */}
+
+			<button className="btn-delete-all" onClick={handleDeleteAllItems}>
+				X
+			</button>
 
 			<div className="new-item-preview">
 				<span>

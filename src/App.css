@@ -1,9 +1,21 @@
+.full-height {
+	height: 100%;
+}
+
 .item {
 	border: 2px solid black;
 	width: 80%;
 	margin: 10px auto;
 	display: flex;
 	justify-content: space-between;
+}
+
+@media only screen and (max-width: 390px) {
+	.item {
+		display: flex;
+		justify-content: space-evenly;
+		flex-flow: row wrap;
+	}
 }
 
 .btn-container {
@@ -13,14 +25,22 @@
 	padding: 5px;
 }
 
-.float-right-btn {
+.float-right-btn-add {
 	height: 40px;
 	width: 40px;
 	margin: 0 5px;
 }
 
+.btn-delete-all {
+	display: block;
+	height: 40px;
+	width: 40px;
+	margin: 30px auto;
+}
+
 .name-input {
 	margin: 5px;
+	height: 40px;
 	min-width: 50%;
 	border: 2px black solid;
 }
@@ -30,8 +50,4 @@
 	width: 80px;
 	margin: 5px;
 	border: 2px black solid;
-}
-
-.saved {
-	background-color: rgb(202, 200, 200);
 }
