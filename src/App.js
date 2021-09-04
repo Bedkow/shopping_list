@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import "./App.css";
 import { useState } from "react";
 
@@ -44,60 +43,55 @@ function App() {
 	return (
 		<div className="full-height">
 			<Header />
-
-			<div className="item">
-				<input
-					value={inputItemName}
-					type="text"
-					className="name-input"
-					placeholder="Item's name..."
-					onChange={handleChangeNewName}
-					maxLength="50"
-				></input>
-				<input
-					value={inputItemNumber}
-					type="number"
-					className="number-input"
-					placeholder="Quantity..."
-					onChange={handleChangeNewNumber}
-					min="1"
-					max="1000000000"
-				></input>
-				<div className="btn-container">
-					<button className="float-right-btn-add" onClick={handleAddNewItem}>
-						+
-					</button>
+			<main>
+				<div className="item">
+					<input
+						value={inputItemName}
+						type="text"
+						className="name-input"
+						placeholder="Item's name..."
+						onChange={handleChangeNewName}
+						maxLength="50"
+					></input>
+					<input
+						value={inputItemNumber}
+						type="number"
+						className="number-input"
+						placeholder="Quantity..."
+						onChange={handleChangeNewNumber}
+						min="1"
+						max="1000000000"
+					></input>
+					<div className="btn-container">
+						<button className="float-right-btn-add" onClick={handleAddNewItem}>
+							+
+						</button>
+					</div>
 				</div>
-			</div>
 
-			{/* delete all items */}
+				<div className="new-item-preview">
+					{inputItemName} {inputItemNumber}
+				</div>
 
-			<button className="btn-delete-all" onClick={handleDeleteAllItems}>
-				X
-			</button>
+				<ul className="list-of-items">
+					{arrayOfItems.map((item) => (
+						<li
+							className="new-item"
+							key={item.itemName + item.quantity + item.id}
+						>
+							<input type="checkbox" className="check" />
 
-			<div className="new-item-preview">
-				<span>
-					Item's name: {inputItemName} Quantity: {inputItemNumber}
-				</span>
-			</div>
+							<span className="item-name-added">{item.itemName} </span>
+							<span className="item-number-added">{item.quantity} </span>
+						</li>
+					))}
+				</ul>
+				{/* delete all items */}
 
-			<ul className="list-of-items">
-				{arrayOfItems.map((item) => (
-					<li
-						className="new-item"
-						key={item.itemName + item.quantity + item.id}
-					>
-						<span>
-							<input type="checkbox" />
-						</span>
-						<span>{item.itemName} </span>
-						<span>{item.quantity} </span>
-					</li>
-				))}
-			</ul>
-
-			<Footer />
+				<button className="btn-delete-all" onClick={handleDeleteAllItems}>
+					Clean All
+				</button>
+			</main>
 		</div>
 	);
 }
