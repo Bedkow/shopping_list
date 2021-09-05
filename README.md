@@ -25,4 +25,4 @@
 `npm run start` - start a dev server
 
 ### How to use:
-Add items and their quantities to the list, check the checkboxes if you've found the desired items. Click "Clen All" if the list is no longer needed and you want to create a new one.
+Add items and their quantities to the list, check the checkboxes if you've found the desired items. Click "Clean All" if the list is no longer needed and you want to create a new one.
